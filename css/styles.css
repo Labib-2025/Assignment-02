@@ -33,6 +33,25 @@ nav .logo {
     color: white;
 }
 
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 48px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 24px;
+    /* text-align: center; */
+}
+
+p {
+    font-size: 16px;
+}
+
 .menu ul {
     display: flex;
     gap: 20px;    
@@ -49,7 +68,17 @@ nav .logo {
 
 .subscribe-btn button {
     border-radius: 1000px;
+    color: white;
     padding: 16px;
+}
+
+.gradient-color {
+    background: #F7E93F;
+    background: linear-gradient(90deg, rgba(247, 233, 63, 1) 0%, rgba(251, 9, 180, 1) 50%, rgba(145, 0, 248, 1) 100%);
+}
+
+.hamburger {
+    display: none;
 }
 
 .hero-background {
@@ -105,15 +134,26 @@ nav .logo {
 .btn-container {
     display: flex;
     justify-content: center;
+    gap: 5px;
     
 }
 
 .btn-container button{
+    display: flex;
     border-radius: 1000px;
     align-items: center;
     justify-content: center;
-    padding: 12px 20px; 
+    padding: 12px 20px;
+}
 
+.transparent-btn {
+    background-color: transparent;
+    border: 2px solid #00FF88;
+    color: #00FF88;
+}
+
+.btn-container button img {
+    margin-right: 5px;
 }
 
 .about {
@@ -143,15 +183,11 @@ nav .logo {
     color: white;
 }
 
-.techwave h1 {
-    margin: 40px;
-}
-
 .card-grid {
     display: grid;
     justify-items: center;
     justify-content: center;
-    gap:20px;
+    gap:10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
 }
@@ -165,6 +201,7 @@ nav .logo {
     background-color: #351165;
     padding: 40px;
     border-radius: 40px;
+    width: 100%;
 }
 
 .card-2-row {
@@ -174,4 +211,145 @@ nav .logo {
 
 .card-2-col {
     grid-column: span 2;
+}
+
+
+.vid-section {
+    background-color: #1A0B2E;
+    color: white;
+    padding: 120px 200px;
+
+}
+
+.vid-section h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.feature-video {
+    display: flex;
+    gap:10px;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.card-container {
+    width: 380px;
+    height: 480px;
+    /* padding: 0px; */
+    border-radius: 10px;
+    background-color: #250D44;
+}
+
+.video-container iframe {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.text-container-3 {
+    padding: 10px;
+}
+
+.arrenge {
+    margin-top: 10px;
+    display: flex;
+    color: #00FF88;
+}
+
+.arrenge img {
+    margin-right: 5px;
+}
+
+.last-section {
+    background-color: #1A0B2E;
+    color: white;
+    padding: 120px 200px;
+}
+
+.alex {
+    display: flex;
+    gap:24px;
+    align-items: center;    
+    margin-top: 40px;
+    background-color: #250D44;
+    padding: 40px;
+}
+
+.icon-container {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.icon-container div {
+    display: flex;
+    height: 30px;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 1px solid #533C72;
+}
+
+
+
+footer {
+    background-image: url(../assets/footer-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;   
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+/* .footer-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.img-text{
+    display: flex;
+    gap: 10px;
+    color: white;
+}
+.footer-midddle-content{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.copy-right{
+    color: white;
+    text-align: center;
+}
+.footer-heading {
+  background: linear-gradient(90deg, rgba(247,233,63,1) 0%, rgba(251,9,180,1) 50%, rgba(145,0,248,1) 100%);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; 
+}
+
+.footer-title{
+    color: white;
+}
+
+/* responsib style */
+
+/* mobile responsib style */
+@media (max-width: 576px) {
+    header {
+        background-color: #1A0B2E;
+        padding: 16px 20px;
+    }   
+    .menu {
+        display:none;
+    }
+    .subscribe-btn {
+        display: none;
+    }
+
 }

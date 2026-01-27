@@ -19,6 +19,8 @@
 header {
     background-color: #1A0B2E;
     padding: 16px 200px;
+    position: relative;
+    z-index: 100;
 }
 
 nav {
@@ -66,11 +68,24 @@ p {
     color: white;
 }
 
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+
 .subscribe-btn button {
     border-radius: 1000px;
     color: white;
     padding: 16px;
 }
+
+.subscribe-btn button:hover {    
+    cursor: pointer;      
+}
+
+.subscribe-btn button:active {
+    background: blue;
+}
+
 
 .gradient-color {
     background: #F7E93F;
@@ -81,16 +96,52 @@ p {
     display: none;
 }
 
-.hero-background {
+.hero-root {
+    display: flex;
+    background-image: url(../assets/hero-bg.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+}
+
+.hero-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.microphone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-container { 
+    position:relative;    
+    color: white;
+    text-align: center;
+    background-color: #1A0B2E; 
+}
+
+
+
+
+
+
+/* .hero-background {
     background-image: url(../assets/hero-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    position: relative; 
-}
+    position: relative;
+    z-index: 1;
+} */
 
-.hero-circle {
+/* .hero-circle {
     position: absolute; 
     top: 35%; 
     left: 50%; 
@@ -106,13 +157,13 @@ p {
     max-width: 100%;
     max-height: 100%;
     /* margin-bottom: 50px; */
-}
+
 
 .microphone {
     position: absolute;
     width: auto;   
     height: 200px;
-}
+} */
 
 .text-container { 
     position: absolute; 
@@ -146,6 +197,14 @@ p {
     padding: 12px 20px;
 }
 
+.btn-container button:hover {        
+    cursor: pointer;    
+}
+
+.btn-container button:active {
+    background: blue;
+}
+
 .listen {
     color: white;
 }
@@ -162,7 +221,7 @@ p {
 
 .about {
     background-color: #1A0B2E;
-    padding: 50px 200px 120px;
+    padding: 120px 200px 120px;
     color: white;
     text-align: center;
 }
@@ -185,6 +244,10 @@ p {
     background-color: #230E3D;
     padding: 120px 200px;
     color: white;
+}
+
+.techwave h2 {
+    margin-bottom: 120px;
 }
 
 .card-grid {
@@ -272,7 +335,6 @@ p {
 
 .alex {
     display: flex;
-    flex-wrap: wrap;
     gap:24px;
     align-items: center;    
     margin-top: 40px;
@@ -344,9 +406,7 @@ footer {
 }
 
 /* responsib style */
-
-/* mobile responsib style */
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
     header {
         background-color: #1A0B2E;
         padding: 16px 20px;
@@ -367,62 +427,10 @@ footer {
         display:flex;
     }
 
-    .hero-background {
-        background-image: url(../assets/hero-bg.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 70vh;
-        padding: 10px;
-        position: relative; 
-    }
-
-    .hero-circle {
-        position: absolute; 
-        top: 35%; 
-        left: 50%; 
-        transform: translate(-50%, -50%);  
-        width: auto;  
-        height: 500px;  
-        display: flex;              
-        align-items: center;
-        justify-content: center;
-    }
-
-    .hero-circle img {
-        max-width: 100%;
-        max-height: 100%;
-        /* margin-bottom: 50px; */
-    }
-
-    .microphone {
-        position: absolute;
-        width: auto;   
-        height: 80px;
-    }
-
-    .text-container { 
-        position: absolute; 
-        top: 50%; 
-        left: 50%; 
-        transform: translateX(-50%);
-        color: white;
-        text-align: center; 
-    }
-
-    .text-container h1 {
-        font-size: 40px;
-    }
-
-    .text-container p {
-        margin-bottom: 10px;
-    }
-
     .btn-container {
         display: flex;
         justify-content: center;
-        gap: 5px;
-        
+        gap: 5px;        
     }
 
     .btn-container button{
@@ -488,6 +496,27 @@ footer {
         padding: 20px;
     }
 
+    .alex {
+        display: flex;
+        flex-wrap: wrap;
+        gap:24px;
+        align-items: center; 
+        justify-content: center;   
+        margin-top: 40px;
+        background-color: #250D44;
+        padding: 40px;
+    }
+
+    .alex h3, .alex p {
+        text-align: center;
+    }
+
+    .icon-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     footer {
         background-image: url(../assets/footer-bg.png);
         background-position: center;
@@ -498,12 +527,17 @@ footer {
         justify-content: center;
         align-items: center; 
         padding: 20px; 
+    }    
+    
+
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    header {
+        background-color: #1A0B2E;
+        padding: 16px 20px;
+        position: relative;
+        z-index: 100;
     }
-
-
-
-
-    
-    
 
 }

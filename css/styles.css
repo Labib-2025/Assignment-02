@@ -47,7 +47,6 @@ h2 {
 
 h3 {
     font-size: 24px;
-    /* text-align: center; */
 }
 
 p {
@@ -76,14 +75,17 @@ p {
     border-radius: 1000px;
     color: white;
     padding: 16px;
+    transition: transform 0.3s ease;
+    border: none;
 }
 
 .subscribe-btn button:hover {    
-    cursor: pointer;      
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 .subscribe-btn button:active {
-    background: blue;
+    transform: scale(0.98);
 }
 
 
@@ -96,20 +98,62 @@ p {
     display: none;
 }
 
+
 .hero-root {
     display: flex;
     background-image: url(../assets/hero-bg.png);
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    position: relative;
 
+}
+
+.hero-root {
+    display: flex;
+    background-image: url(../assets/hero-bg.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    position: relative; 
 }
 
 .hero-circle {
     position: absolute;
-    top: 50%;
+    top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 40%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.new-badge {
+    position: absolute;
+    top: 5%;
+    right: 20%;
+    background-color: #00FF88;
+    color: black;
+    padding: 0.5vw 1.2vw;
+    border-radius: 20px;
+    font-size: 1.2vw;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -5px 5px 10px gray;
+    white-space: nowrap;
 }
 
 .microphone {
@@ -117,62 +161,25 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 80%;   
+    height: 80%;  
 }
 
+.microphone img {
+    width: 100%;  
+    height: 100%;
+    object-fit: contain;
+}
+
+
 .text-container { 
-    position:relative;    
+    
     color: white;
     text-align: center;
     background-color: #1A0B2E; 
 }
 
 
-
-
-
-
-/* .hero-background {
-    background-image: url(../assets/hero-bg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    position: relative;
-    z-index: 1;
-} */
-
-/* .hero-circle {
-    position: absolute; 
-    top: 35%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);  
-    width: auto;  
-    height: 500px;  
-    display: flex;              
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-circle img {
-    max-width: 100%;
-    max-height: 100%;
-    /* margin-bottom: 50px; */
-
-
-.microphone {
-    position: absolute;
-    width: auto;   
-    height: 200px;
-} */
-
-.text-container { 
-    position: absolute; 
-    top: 70%; 
-    left: 50%; 
-    transform: translateX(-50%);
-    color: white;
-    text-align: center; 
-}
 
 .text-container h1 {
     font-size: 60px;
@@ -195,14 +202,16 @@ p {
     align-items: center;
     justify-content: center;
     padding: 12px 20px;
+    transition: transform 0.3s ease;
 }
 
 .btn-container button:hover {        
-    cursor: pointer;    
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 .btn-container button:active {
-    background: blue;
+    transform: scale(0.98);
 }
 
 .listen {
@@ -221,7 +230,7 @@ p {
 
 .about {
     background-color: #1A0B2E;
-    padding: 120px 200px 120px;
+    padding: 200px 200px 120px;
     color: white;
     text-align: center;
 }
@@ -370,12 +379,6 @@ footer {
     justify-content: center;
     align-items: center;  
 }
-
-/* .footer-cont {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 
 .img-text{
     display: flex;
